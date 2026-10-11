@@ -19,7 +19,7 @@ namespace ejercicioTelegrama
         {
             InitializeComponent();
         }
-                
+
 
         private void btnCalcular_Click_1(object sender, EventArgs e)
         {
@@ -31,18 +31,18 @@ namespace ejercicioTelegrama
             //Leo el telegrama 
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            /*if (cbUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }
-            else { tipoTelegrama = 'o'; }
+            else { tipoTelegrama = 'o'; }*/
 
             //Obtengo el número de palabras que forma el telegrama
-            
-            numPalabras = textoTelegrama.Split(new char[] { ' ', '\t', '\n','\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
+
+            numPalabras = textoTelegrama.Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
 
             //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if (rbOrdinario.Checked && !rbUrgente.Checked)
             {
                 if (numPalabras <= 10)
                 { coste = 25; }
@@ -51,7 +51,7 @@ namespace ejercicioTelegrama
             }
 
             //Si el telegrama es urgente
-            else if (tipoTelegrama == 'u')
+            else if (!rbOrdinario.Checked && rbUrgente.Checked)
             {
                 if (numPalabras <= 10)
                 { coste = 5; }
@@ -63,6 +63,25 @@ namespace ejercicioTelegrama
                 coste = 0;
 
             txtPrecio.Text = coste.ToString() + " euros";
+        }
+
+        private void rbOrdinario_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbUrgente.Checked)
+            {
+                rbUrgente.Checked = false;
+                rbOrdinario.Checked = true;
+            }
+
+        }
+
+        private void rbUrgente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbOrdinario.Checked)
+            {
+                rbOrdinario.Checked = false;
+                rbUrgente.Checked = true;
+            }
         }
     }
 }

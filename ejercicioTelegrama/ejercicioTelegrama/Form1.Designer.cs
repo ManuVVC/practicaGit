@@ -28,82 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbUrgente = new System.Windows.Forms.CheckBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTelegrama = new System.Windows.Forms.TextBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // cbUrgente
-            // 
-            this.cbUrgente.AutoSize = true;
-            this.cbUrgente.Location = new System.Drawing.Point(84, 269);
-            this.cbUrgente.Name = "cbUrgente";
-            this.cbUrgente.Size = new System.Drawing.Size(70, 17);
-            this.cbUrgente.TabIndex = 0;
-            this.cbUrgente.Text = "Urgente?";
-            this.cbUrgente.UseVisualStyleBackColor = true;
+            txtPrecio = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            txtTelegrama = new TextBox();
+            btnCalcular = new Button();
+            rbOrdinario = new RadioButton();
+            rbUrgente = new RadioButton();
+            SuspendLayout();
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(128, 330);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(156, 20);
-            this.txtPrecio.TabIndex = 1;
+            txtPrecio.Location = new Point(149, 381);
+            txtPrecio.Margin = new Padding(4, 3, 4, 3);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(181, 23);
+            txtPrecio.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 333);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Coste:";
+            label1.AutoSize = true;
+            label1.Location = new Point(94, 384);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Coste:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Texto";
+            label2.AutoSize = true;
+            label2.Location = new Point(94, 82);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Texto";
             // 
             // txtTelegrama
             // 
-            this.txtTelegrama.Location = new System.Drawing.Point(84, 101);
-            this.txtTelegrama.Multiline = true;
-            this.txtTelegrama.Name = "txtTelegrama";
-            this.txtTelegrama.Size = new System.Drawing.Size(549, 125);
-            this.txtTelegrama.TabIndex = 4;
+            txtTelegrama.Location = new Point(98, 117);
+            txtTelegrama.Margin = new Padding(4, 3, 4, 3);
+            txtTelegrama.Multiline = true;
+            txtTelegrama.Name = "txtTelegrama";
+            txtTelegrama.Size = new Size(640, 144);
+            txtTelegrama.TabIndex = 4;
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(446, 301);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(187, 49);
-            this.btnCalcular.TabIndex = 5;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click_1);
+            btnCalcular.Location = new Point(520, 347);
+            btnCalcular.Margin = new Padding(4, 3, 4, 3);
+            btnCalcular.Name = "btnCalcular";
+            btnCalcular.Size = new Size(218, 57);
+            btnCalcular.TabIndex = 5;
+            btnCalcular.Text = "Calcular";
+            btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click_1;
+            // 
+            // rbOrdinario
+            // 
+            rbOrdinario.AutoSize = true;
+            rbOrdinario.Location = new Point(302, 324);
+            rbOrdinario.Name = "rbOrdinario";
+            rbOrdinario.Size = new Size(75, 19);
+            rbOrdinario.TabIndex = 6;
+            rbOrdinario.TabStop = true;
+            rbOrdinario.Text = "Ordinario";
+            rbOrdinario.UseVisualStyleBackColor = true;
+            // 
+            // rbUrgente
+            // 
+            rbUrgente.AutoSize = true;
+            rbUrgente.Location = new Point(417, 325);
+            rbUrgente.Name = "rbUrgente";
+            rbUrgente.Size = new Size(67, 19);
+            rbUrgente.TabIndex = 7;
+            rbUrgente.TabStop = true;
+            rbUrgente.Text = "Urgente";
+            rbUrgente.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.txtTelegrama);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.cbUrgente);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(933, 519);
+            Controls.Add(rbUrgente);
+            Controls.Add(rbOrdinario);
+            Controls.Add(btnCalcular);
+            Controls.Add(txtTelegrama);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtPrecio);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -115,6 +135,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTelegrama;
         private System.Windows.Forms.Button btnCalcular;
+        private RadioButton rbOrdinario;
+        private RadioButton rbUrgente;
     }
 }
 
