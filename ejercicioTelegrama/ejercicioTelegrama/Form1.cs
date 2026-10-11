@@ -45,7 +45,7 @@ namespace ejercicioTelegrama
             if (rbOrdinario.Checked && !rbUrgente.Checked)
             {
                 if (numPalabras <= 10)
-                { coste = 25; }
+                { coste = 3; }
                 else
                 { coste = 0.5 * numPalabras; }
             }
@@ -54,9 +54,9 @@ namespace ejercicioTelegrama
             else if (!rbOrdinario.Checked && rbUrgente.Checked)
             {
                 if (numPalabras <= 10)
-                { coste = 5; }
+                { coste = 6; }
                 else
-                { coste = 5 + 0.75 * (numPalabras - 10); }
+                { coste = 6 + 0.75 * (numPalabras - 10); }
             }
 
             else
